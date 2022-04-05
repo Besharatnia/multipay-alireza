@@ -35,10 +35,11 @@ abstract class Receipt implements ReceiptInterface
      * @param $driver
      * @param $referenceId
      */
-    public function __construct($driver, $referenceId)
+    public function __construct($driver, $referenceId, $details = [])
     {
         $this->driver = $driver;
         $this->referenceId = $referenceId;
+        $this->details = $details;
         $this->date = Carbon::now();
     }
 
