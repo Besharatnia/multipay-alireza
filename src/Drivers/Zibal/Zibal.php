@@ -184,7 +184,7 @@ class Zibal extends Driver
             var_dump($body);
         */
 
-        return $this->createReceipt($orderId);
+        return $this->createReceipt($orderId,$body);
     }
 
     /**
@@ -194,9 +194,9 @@ class Zibal extends Driver
      *
      * @return Receipt
      */
-    protected function createReceipt($referenceId)
+    protected function createReceipt($referenceId,$dateils=[])
     {
-        $receipt = new Receipt('Zibal', $referenceId);
+        $receipt = new Receipt('Zibal', $referenceId,$dateils);
 
         return $receipt;
     }
